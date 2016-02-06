@@ -9,4 +9,4 @@ For integration:
 methods of the main-class.
 * In fxml-applications like in this quickstart project, the fxml loaders 
 controller factory should be replaced with new DI-based factory. 
-See **SpringFXMLLoader** an its use) as an example.
+See **SpringFXMLLoader** an its use as an example.
