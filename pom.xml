@@ -9,5 +9,6 @@
   <description>Base of code snippets</description>
   <modules>
     <module>javafxWithDi</module>
+    <module>javafx8CustomDialog</module>
   </modules>
 </project>
