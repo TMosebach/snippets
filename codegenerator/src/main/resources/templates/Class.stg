@@ -1,0 +1,45 @@
+class(c) ::= <<
+public class <c.name> <if(c.superType)><superType(c.superType)><endif> {
+    <c.attributs:{ a | <if(a)><attribut(a)><endif>}>
+    <c.features:{ f | <if(f)><feature(f)><endif>}>
+
+    <c.attributs:{ a | <if(a)><getterSetter(a)><endif>}>
+    <c.features:{ f | <if(f)><featuregetterSetter(f)><endif>}>
+}
+>>
+
+featuregetterSetter(f) ::= "<fgetter(f)><\n><fsetter(f)><\n>"
+
+fgetter(f) ::= <<
+public java.util.List\<<f.type.name>\> get<f.capitalizedName>List() {
+    return this.<f.name>
+}
+>>
+
+fsetter(f) ::= <<
+public void set<f.capitalizedName>List(java.util.List\<<f.type.name>\> <f.name>List) {
+    this.<f.name>List = <f.name>List;
+}
+>>
+
+feature(f) ::= <<
+private java.util.List\<<f.type.name>\> <f.name>List;
+>>
+
+superType(superType) ::= " extends <superType.name>"
+
+attribut(a) ::= "private <a.type> <a.name>;"
+
+getterSetter(a) ::= "<getter(a)><\n><setter(a)><\n>"
+
+getter(a) ::= <<
+public <a.type> get<a.capitalizedName>() {
+    return this.<a.name>
+}
+>>
+
+setter(a) ::= <<
+public void set<a.capitalizedName>(<a.type> <a.name>) {
+    this.<a.name> = <a.name>;
+}
+>>
