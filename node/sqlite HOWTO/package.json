@@ -1,0 +1,18 @@
+{
+  "name": "sqlite-howto",
+  "version": "1.0.0",
+  "description": "Example use of the sqlite-package",
+  "main": "howto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sqlite",
+    "howto"
+  ],
+  "author": "Thomas Mosebach",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite": "^3.0.0"
+  }
+}
