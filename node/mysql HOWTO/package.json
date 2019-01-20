@@ -1,0 +1,16 @@
+{
+  "name": "mysql-howto",
+  "version": "1.0.0",
+  "description": "*IMPORTANT* Before using mysql, the user need a password.",
+  "main": "connect.js",
+  "dependencies": {
+    "@mysql/xdevapi": "^8.0.13",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
