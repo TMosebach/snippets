@@ -1,0 +1,6 @@
+<nav>
+    {{title}}
+    <a (click)="logout()" href="#" *ngIf="auth.loggedIn()">Logout</a>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+<h1>Registrieren</h1>
+
+<form [formGroup]="registrierForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="kennung">Kennung</label>
+  </div>
+  <input type="text" id="kennung" formControlName="kennung">
+  <div>
+    <label for="password">Passwort</label>
+  </div>
+  <input type="password" id="password" formControlName="password">
+  <div>
+    <label for="repeatedPassword">Passwort wiederholen</label>
+  </div>
+  <input type="password" id="repeatedPassword" formControlName="repeatedPassword">
+  <div>
+    <label for="vorname">Vorname</label>
+  </div>
+  <input type="text" id="vorname" formControlName="vorname">
+  <div>
+    <label for="nachname">Nachname</label>
+  </div>
+  <input type="text" id="nachname" formControlName="nachname">
+
+  <div>
+    <button type="submit">Registrieren</button>
+  </div>
+</form>
