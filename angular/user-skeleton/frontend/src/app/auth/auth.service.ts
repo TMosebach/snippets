@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user';
+import { LoginComponent } from '../user/login/login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +23,10 @@ export class AuthService {
       );
   }
 
-  public register(kennung: string, password: string, vorname: string, nachname: string): void {
-    this.http
-      .post<boolean>('http://localhost:3000/api/1.0/register', {kennung: kennung, password: password, vorname: vorname, nachname: nachname})
-      .subscribe(result => console.log('registriert.'));
+  public register(kennung: string, password: string, vorname: string, nachname: string): Observable<boolean> {
+    return this.http
+      .post<boolean>('http://localhost:3000/api/1.0/register', 
+           { kennung: kennung, password: password, vorname: vorname, nachname: nachname });
   }
 
   public logout() {

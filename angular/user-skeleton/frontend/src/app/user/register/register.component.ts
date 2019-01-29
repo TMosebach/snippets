@@ -27,8 +27,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    const user = this.registrierForm.value;
     this.authService
-      .register(this.registrierForm.value.kennung, this.registrierForm.value.password, this.registrierForm.value.vorname, this.registrierForm.value.nachname);
-    this.router.navigate(['login']);
+      .register(user.kennung, user.password, user.vorname, user.nachname)
+      .subscribe( result =>
+        this.authService.login(user.kennung, user.password)
+          .subscribe( result => this.router.navigate(['profil']))
+      );
   }
 }

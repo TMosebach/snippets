@@ -66,7 +66,7 @@ app.post('/api/1.0/register', (req, res) => {
 
 app.get('/api/1.0/profile/:id', (req, res) => {
     let userId = req.params.id;
-    const profile = PROFILES.find(p => p.user_id == userId);
+    const profile = PROFILES.find(p => p.user_id == req.user.userID);
     res.status(200).type('application/json').send(profile);
 });
 
