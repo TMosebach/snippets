@@ -2,7 +2,7 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand">{{title}}</a>
         <form class="form-inline">
-            <a  class="" (click)="logout()" href="#" *ngIf="auth.loggedIn()">Logout</a>
+            <a  class="" (click)="logout()" href="#" *ngIf="auth.loggedIn()"><fa-icon [icon]="faSignOutAlt"></fa-icon>Logout</a>
         </form>
     </nav>
 
