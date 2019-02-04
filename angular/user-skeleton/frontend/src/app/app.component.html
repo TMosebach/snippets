@@ -1,6 +1,10 @@
-<nav>
-    {{title}}
-    <a (click)="logout()" href="#" *ngIf="auth.loggedIn()">Logout</a>
-</nav>
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">{{title}}</a>
+        <form class="form-inline">
+            <a  class="" (click)="logout()" href="#" *ngIf="auth.loggedIn()">Logout</a>
+        </form>
+    </nav>
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</div>
