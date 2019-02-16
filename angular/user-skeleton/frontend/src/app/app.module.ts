@@ -7,6 +7,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -14,7 +15,8 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
